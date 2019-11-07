@@ -17,7 +17,7 @@ export { defaultTheme };
 
 const defaultImagePath = '//cdn.jsdelivr.net/emojione/assets/svg/';
 const defaultImageType = 'svg';
-const defaultCacheBustParam = '?v=4.5.0';
+const defaultCacheBustParam = '?v=2.2.7';
 
 // TODO activate/deactivate different the conversion or search part
 

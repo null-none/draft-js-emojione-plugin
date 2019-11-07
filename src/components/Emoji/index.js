@@ -20,10 +20,12 @@ const Emoji = ({
       <span title={emojione.toShort(decoratedText)}>{props.children}</span>
     );
   } else {
-    // short name to image url code steal from emojione source codes
-    const shortNameForImage = emojione.emojioneList[shortName].uc_base;
+    // short name to image url code steal from emojione source code
+    const shortNameForImage =
+      emojione.emojioneList[shortName].unicode[
+        emojione.emojioneList[shortName].unicode.length - 1
+      ];
     const backgroundImage = `url(${imagePath}${shortNameForImage}.${imageType}${cacheBustParam})`;
-    console.log(backgroundImage);
     const combinedClassName = clsx(theme.emoji, className);
 
     emojiDisplay = (

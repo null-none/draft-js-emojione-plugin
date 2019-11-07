@@ -1,4 +1,4 @@
-# DraftJS Emoji Plugin
+# DraftJS Emoji (render as image) Plugin
 
 *This is a plugin for the `draft-js-plugins-editor`.*
 
@@ -8,8 +8,10 @@ This plugin provides consistent Emoji display across all platforms, independent 
 
 ```js
 import createEmojiPlugin from 'draft-js-emojione-plugin';
+import createImagePlugin from "draft-js-image-plugin";
 
 const emojiPlugin = createEmojiPlugin();
+const imagePlugin = createImagePlugin();
 ```
 ## Advanced Usage
 
@@ -26,7 +28,7 @@ const emojiPlugin = createEmojiPlugin({
 ## Importing the default styles
 
 The plugin ships with a default styling available at this location in the installed package:
-`node_modules/draft-js-emoji-plugin/lib/plugin.css`.
+`node_modules/draft-js-emojione-plugin/lib/plugin.css`.
 
 ### Webpack Usage
 
