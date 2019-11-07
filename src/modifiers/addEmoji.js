@@ -1,4 +1,4 @@
-import { EditorState } from 'draft-js';
+import { EditorState, AtomicBlockUtils } from 'draft-js';
 import emojione from 'emojione';
 
 // This modifier can inserted emoji to current cursor position (with replace selected fragment),
@@ -17,10 +17,11 @@ const addEmoji = (editorState, emojiShortName, mode = Mode.INSERT) => {
   const contentStateWithEntity = contentState.createEntity(
     urlType,
     'IMMUTABLE',
-    {src: objEmojji.firstChild.getAttribute("src") }
+    {src: objEmojji.firstChild.getAttribute("src"),
+     alt: objEmojji.firstChild.getAttribute("alt") }
   );  
   const entityKey = contentStateWithEntity.getLastCreatedEntityKey();
-  const newEditorState = draftJs.AtomicBlockUtils.insertAtomicBlock(
+  const newEditorState = AtomicBlockUtils.insertAtomicBlock(
     editorState,
     entityKey,
     ' '

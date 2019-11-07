@@ -1,7 +1,7 @@
 {
   "name": "draft-js-emojione-plugin",
-  "version": "4.5.0-7alpha",
-  "description": "Emojione Plugin for DraftJS",
+  "version": "4.5.0-8alpha",
+  "description": "Emojione (image) Plugin for DraftJS",
   "repository": {
     "type": "git",
     "url": "https://github.com/null-none/draft-js-emojione-plugin.git"
